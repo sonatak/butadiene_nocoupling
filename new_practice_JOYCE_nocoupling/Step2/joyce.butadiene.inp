@@ -1,0 +1,67 @@
+$title Butadiene - Step 2
+$equil ../G09.data/butadiene.opt+freq.fchk
+$forcefield gromacs butadiene.top
+$zero   1.d-12
+$whess 5000. 2500.0
+$depencence 1.2
+     26 =   32*1.d0
+     27 =   33*1.d0
+     28 =   30*1.d0
+     29 =   31*1.d0   
+     35 =   36*1.d0
+     39 =   40*1.d0
+     43 =   44*1.d0
+$end
+$assign
+  1 =   3261.6371334     CA-HA
+  2 =   2550.0020261     CA-CA
+  3 =   3261.6371332     CA-HA
+  4 =   4863.4337405     CA=CB
+  5 =   3354.9778898     CB-HB
+  6 =   3378.0879769     CB-HB
+  7 =   4863.4337412     CA=CB
+  8 =   3354.9778899     CB-HB
+  9 =   3378.0879768     CB-HB
+ 10 =    269.6830880     HA-CA-CA
+ 11 =    403.1152331     HA-CA=CB
+ 12 =    269.6830880     HA-CA-CA
+ 13 =    642.8781816     CA-CA=CB
+ 14 =    642.8781815     CA-CA=CB
+ 15 =    403.1152331     HA-CA=CB
+ 16 =    353.1954698     CA=CB-HB
+ 17 =    335.9701194     CA=CB-HB
+ 18 =    260.7986651     HB-CB-HB
+ 19 =    353.1954698     CA=CB-HB
+ 20 =    335.9701194     CA=CB-HB
+ 21 =    260.7986651     HB-CB-HB
+$end
+
+$geom
+./../G09.data/scan_19files/butadiene_scan_0001.fchk 5.0 0.0 0.0 0.0 ; 5 3 1 8 
+./../G09.data/scan_19files/butadiene_scan_0002.fchk 5.0 0.0 0.0 0.0 -f 
+./../G09.data/scan_19files/butadiene_scan_0003.fchk 5.0 0.0 0.0 0.0 -f
+./../G09.data/scan_19files/butadiene_scan_0004.fchk 5.0 0.0 0.0 0.0 -f
+./../G09.data/scan_19files/butadiene_scan_0005.fchk 5.0 0.0 0.0 0.0 -f
+./../G09.data/scan_19files/butadiene_scan_0006.fchk 5.0 0.0 0.0 0.0 -f
+./../G09.data/scan_19files/butadiene_scan_0007.fchk 10.0 0.0 0.0 0.0 -f 
+./../G09.data/scan_19files/butadiene_scan_0008.fchk 5.0 0.0 0.0 0.0 -f
+./../G09.data/scan_19files/butadiene_scan_0009.fchk 5.0 0.0 0.0 0.0 -f
+./../G09.data/scan_19files/butadiene_scan_0010.fchk 5.0 0.0 0.0 0.0 -f
+./../G09.data/scan_19files/butadiene_scan_0011.fchk 5.0 0.0 0.0 0.0 -f
+./../G09.data/scan_19files/butadiene_scan_0012.fchk 5.0 0.0 0.0 0.0 -f
+./../G09.data/scan_19files/butadiene_scan_0013.fchk 5.0 0.0 0.0 0.0 -f
+./../G09.data/scan_19files/butadiene_scan_0014.fchk 5.0 0.0 0.0 0.0 -f
+./../G09.data/scan_19files/butadiene_scan_0015.fchk 5.0 0.0 0.0 0.0 -f
+./../G09.data/scan_19files/butadiene_scan_0016.fchk 5.0 0.0 0.0 0.0 -f
+./../G09.data/scan_19files/butadiene_scan_0017.fchk 5.0 0.0 0.0 0.0 -f
+./../G09.data/scan_19files/butadiene_scan_0018.fchk 5.0 0.0 0.0 0.0 -f
+./../G09.data/scan_19files/butadiene_scan_0019.fchk 10.0 0.0 0.0 0.0 -f
+
+$end
+$keepff 26 - 50
+
+$scan joyce.scan1.dat
+5 3 1 8 ; 0. 180. 10.
+$end
+
+end-of-file

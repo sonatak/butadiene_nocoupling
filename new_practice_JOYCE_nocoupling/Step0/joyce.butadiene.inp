@@ -1,0 +1,6 @@
+$title Butadiene - Step 0
+$equil ../G09.data/butadiene.opt+freq.fchk
+$forcefield gromacs butadiene.trial.top
+$zero   1.d-15
+$generate
+end-of-file
