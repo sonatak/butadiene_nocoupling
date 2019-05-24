@@ -1,0 +1,26 @@
+=======================================================================
+INPUT FILES
+   -c         struct. file                 conf.g96
+              (-f is a synonym)
+   -p         topology file                topol.top
+   -n         index with Dihed             index.ndx
+
+OPTIONS
+   -D         Label (required)             guess 
+   -Db        Label bounded (opt)          none
+   -setoff    Switch off the dihed[BROKEN] false
+   -rot       Degrees of rotation          360
+   -rev       Reverse scan direction       false
+   -npts      Process input to check       40
+   -tight     Force angle matching         false
+              (with prec =<0.01)
+   -histieresis Make the way back          false
+   -rerun     Use the traj provided with   false
+              -c to recompute the energy
+              instead of generate scan
+   -corr      Rebase plot[DEPRECATED]      false
+   -rep       Plot final data[DEPRECATED]  false
+   -[no]clean Clean the aux files          true
+   -h         Print help and quit          true
+======================================================================
+

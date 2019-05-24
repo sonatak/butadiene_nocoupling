@@ -1,0 +1,23 @@
+; Define can be used to control processes
+define          = -DPHI -DD_OFF
+
+integrator               = cg
+nsteps                   = 1000000
+emtol                    = 10.0
+
+nstenergy                = 1
+nstcalcenergy            = 1
+
+nstlist                  = 1
+nstype                   = simple
+pbc                      = no
+rlist                    = 0.0
+cutoff-scheme            = group
+
+coulombtype              = Cut-off
+rcoulomb                 = 0.0
+
+vdwtype                  = Cut-off
+rvdw                     = 0.0
+
+constraints               = none

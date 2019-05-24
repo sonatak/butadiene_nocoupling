@@ -1,0 +1,15 @@
+#!/bin/bash
+echo 'Enter the step of reading coordinates from trajectory .trr file. Binary snapshots will be converted into .pdb files'  
+read step
+echo 'Enter the number of snapshots to be written'
+read trajout
+mkdir traj_xyz
+gmx trjconv -f nvt.trr -o trajout.pdb -s nvt.tpr  -skip $step -sep
+echo 'Converting pdb to xyz..............'
+for i in `seq 1 $trajout`
+do 
+babel trajout$i.pdb traj_xyz/trajout$i.xyz 
+done
+rm *pdb*
+
+

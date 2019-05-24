@@ -1,0 +1,24 @@
+; Define can be used to control processes
+;define          = -DPHI -DD_OFF
+; Run Control
+; Minimization parameters
+integrator       = steep 
+nsteps           = 50000
+emtol            = 10.0 ; kJ/mol*nm convergence criterium
+emstep           = 0.01 ; initial step size, nm 
+
+; Output control (not important for minimization)
+;nstenergy                = 1 
+;nstcalcenergy            = 1
+
+; Parameters describing how to find the neighbours of each atom and calculate interaction
+cutoff-scheme            = group ; or Verlet (with pbc)
+ns_type                  = grid ;Method to determine neighbor list
+nstlist                  = 0 ; Frequency to update neighbot list and long range forces for no cut-offs 0
+pbc                      = no
+rlist                    = 0.0 ; ? Cut-off dist for the short range neighbour lst
+coulombtype              = Cut-off
+rcoulomb                 = 0.0 ; no cut-off
+vdwtype                  = Cut-off
+rvdw                     = 0.0 ; no cut-off
+constraints              = none

@@ -1,0 +1,13 @@
+#Setting pbc treatment 'whole', group 0 (system), reprocessing trajectory
+gmx trjconv -f butadiene_solv_prod.xtc -o output1.xtc -s butadiene_solv_prod.tpr -pbc whole
+# Centering butadiene molecule in the box. PBC treatment mol, centering butadiene, output System 
+gmx trjconv -f output1.xtc -o butadiene_centered.xtc -s butadiene_solv_prod.tpr -center -pbc mol
+# Using script to convert xtc trajectory into seperate trajecotries -- written into other directory
+./trj_conv.sh
+# Making the index file (within 1.1 nm)
+gmx select -f trajout0.pdb -sf selection.dat -s ./../butadiene_solv_prod.tpr -on index0.ndx 
+
+
+# Writing the sphere
+gmx trjconv -f trajout0.pdb -s ./../butadiene_solv_prod.tpr -o sphere.pdb -n index0.ndx -center -pbc mol
+ 

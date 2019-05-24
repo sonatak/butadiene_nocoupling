@@ -1,0 +1,72 @@
+load openmpi/gnu/1.10.1 (PATH, MANPATH, LD_LIBRARY_PATH)
+                   :-) GROMACS - gmx mdrun, VERSION 5.1.4 (-:
+
+                            GROMACS is written by:
+     Emile Apol      Rossen Apostolov  Herman J.C. Berendsen    Par Bjelkmar   
+ Aldert van Buuren   Rudi van Drunen     Anton Feenstra   Sebastian Fritsch 
+  Gerrit Groenhof   Christoph Junghans   Anca Hamuraru    Vincent Hindriksen
+ Dimitrios Karkoulis    Peter Kasson        Jiri Kraus      Carsten Kutzner  
+    Per Larsson      Justin A. Lemkul   Magnus Lundborg   Pieter Meulenhoff 
+   Erik Marklund      Teemu Murtola       Szilard Pall       Sander Pronk   
+   Roland Schulz     Alexey Shvetsov     Michael Shirts     Alfons Sijbers  
+   Peter Tieleman    Teemu Virolainen  Christian Wennberg    Maarten Wolf   
+                           and the project leaders:
+        Mark Abraham, Berk Hess, Erik Lindahl, and David van der Spoel
+
+Copyright (c) 1991-2000, University of Groningen, The Netherlands.
+Copyright (c) 2001-2015, The GROMACS development team at
+Uppsala University, Stockholm University and
+the Royal Institute of Technology, Sweden.
+check out http://www.gromacs.org for more information.
+
+GROMACS is free software; you can redistribute it and/or modify it
+under the terms of the GNU Lesser General Public License
+as published by the Free Software Foundation; either version 2.1
+of the License, or (at your option) any later version.
+
+GROMACS:      gmx mdrun, VERSION 5.1.4
+Executable:   /usr/local/gromacs/5.1.4/bin/gmx
+Data prefix:  /usr/local/gromacs/5.1.4
+Command line:
+  gmx mdrun -nt 16 -deffnm butadiene_solv_eq
+
+
+Number of logical cores detected (32) does not match the number reported by OpenMP (16).
+Consider setting the launch configuration manually!
+
+NOTE: Error occurred during GPU detection:
+      CUDA driver version is insufficient for CUDA runtime version
+      Can not use GPU acceleration, will fall back to CPU kernels.
+
+
+Running on 1 node with total 16 cores, 32 logical cores, 0 compatible GPUs
+Hardware detected:
+  CPU info:
+    Vendor: GenuineIntel
+    Brand:  Intel(R) Xeon(R) CPU E5-2630 v3 @ 2.40GHz
+    SIMD instructions most likely to fit this hardware: AVX2_256
+    SIMD instructions selected at GROMACS compile time: SSE4.1
+
+Compiled SIMD instructions: SSE4.1, GROMACS could use AVX2_256 on this machine, which is better
+
+Reading file butadiene_solv_eq.tpr, VERSION 5.1.4 (single precision)
+Changing nstlist from 20 to 40, rlist from 1.102 to 1.111
+
+
+Non-default thread affinity set, disabling internal thread affinity
+Using 1 MPI thread
+Using 16 OpenMP threads 
+
+starting mdrun 'butadiene solvated'
+500000 steps,    500.0 ps.
+
+Writing final coordinates.
+
+               Core t (s)   Wall t (s)        (%)
+       Time:    34758.437     2537.815     1369.6
+                         42:17
+                 (ns/day)    (hour/ns)
+Performance:       17.023        1.410
+
+gcq#12: "Being Great is Not So Good" (Red Hot Chili Peppers)
+

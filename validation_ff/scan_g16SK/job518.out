@@ -1,0 +1,4 @@
+ Read checkpoint file butadiene_scanMM.chk
+ Write formatted file butadiene_scanMM.fchk
+ FChkPn:  Coordinates translated and rotated.
+ FChkPn:  Coordinates match /B/ after translation and rotation.

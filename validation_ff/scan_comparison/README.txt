@@ -1,0 +1,1 @@
+In the directories qm and mm there are calculations performed to check how the QM derived force field reproduces QM energies (B3LYP)  and geometry for the 5 points of dihedral scan for butadiene - at 0, 50 , 90, 140, 180 degrees 

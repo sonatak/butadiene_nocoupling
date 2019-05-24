@@ -1,0 +1,10 @@
+set terminal postscript eps enhanced color font 'Helvetica,18'
+set output "compare_tddft.eps"
+!set terminal pngcairo size 800,600 font ',12'
+!set termoption enhanced
+set key right nobox
+set xlabel "Energy, au"
+set ylabel "angle"
+
+plot 'mm/energiesMM.dat' with linespoints title 'MM', \
+      'qm/energiesQM.dat' with linespoints title 'QM'

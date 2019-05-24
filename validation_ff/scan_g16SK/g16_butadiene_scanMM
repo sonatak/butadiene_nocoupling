@@ -1,0 +1,41 @@
+#!/bin/bash
+
+# ------------------------------------------------------------------
+# Script generado automáticamente usando el comando:
+#   g16_qsub.sh -f butadiene_scanMM.com -np 2
+#
+# Usuario: sonatak
+# Fecha:   lun may 13 16:26:13 CEST 2019
+#
+# Listo para mandar al servidor nv con el comando:
+#   qsub g16_butadiene_scanMM -np 2
+# -----------------------------------------------------------------
+
+# VARIABLE DE ENTORNO
+g16root="/opt/Gaussian/G16.A01_avx2/"
+GAUSS_SCRDIR="/scratch/sonatak"
+export g16root GAUSS_SCRDIR
+. $g16root/g16/bsd/g16.profile
+
+# Va al directorio de trabajo y lanza el calculo
+g16 <butadiene_scanMM.com 1> butadiene_scanMM.log #2> butadiene_scanMM.err
+
+# Transforma los chk en fchk y comprimelos
+if [ "YES" == "YES" ]; then
+    $g16root/g16/formchk -3 butadiene_scanMM.chk butadiene_scanMM.fchk
+    if (( $? == 0 ));then
+        rm butadiene_scanMM.chk
+        rm butadiene_scanMM.fchk.gz 2>/dev/null
+        gzip butadiene_scanMM.fchk
+    fi
+fi
+
+# # Si el trabajo es "instantáneo" (e.g. tiene errores) espera
+# # a que el script de lanzamiento acabe y genere la entrada en el LOG
+# sleep 5
+# 
+# # Actualiza el logfile antes de salir: BUG: cuando parte del JOB_ID ya estaba (eg. 1222 y 222). Solucion con ^
+# job_log=$(grep "^$PBS_JOBID" /home/sonatak/mis_lib/logs/g16_qsub.log)
+# job_log_f="$job_log\tf $(date)"
+# sed -i "s/$job_log/$job_log_f/" /home/sonatak/mis_lib/logs/g16_qsub.log
+

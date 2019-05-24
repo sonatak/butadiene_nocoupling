@@ -1,0 +1,43 @@
+# This file was created Tue May 14 10:00:53 2019
+# Created by:
+#            :-) GROMACS - gmx energy, 2016.4 (double precision) (-:
+# 
+# Executable:   /opt/Gromacs/gromacs-2016.4/bin/gmx_d
+# Data prefix:  /opt/Gromacs/gromacs-2016.4
+# Working dir:  /home/sonatak/Butadiene/butadiene_gasphase/em
+# Command line:
+#   gmx_d energy -f em.edr -o potential.xvg
+# gmx energy is part of G R O M A C S:
+#
+# Georgetown Riga Oslo Madrid Amsterdam Chisinau Stockholm
+#
+@    title "GROMACS Energies"
+@    xaxis  label "Time (ps)"
+@    yaxis  label "(kJ/mol)"
+@TYPE xy
+@ view 0.15, 0.15, 0.75, 0.85
+@ legend on
+@ legend box on
+@ legend loctype view
+@ legend 0.78, 0.8
+@ legend length 2
+@ s0 legend "Potential"
+    0.000000    0.124706
+    5.000000   -0.025150
+    7.000000   -0.140967
+    9.000000   -0.202894
+   11.000000   -0.208953
+   12.000000   -0.212121
+   14.000000   -0.227576
+   16.000000   -0.230648
+   17.000000   -0.231060
+   18.000000   -0.232084
+   20.000000   -0.236107
+   22.000000   -0.236881
+   23.000000   -0.236957
+   24.000000   -0.237323
+   26.000000   -0.238452
+   28.000000   -0.238710
+   29.000000   -0.238805
+   30.000000   -0.238942
+   32.000000   -0.239292
