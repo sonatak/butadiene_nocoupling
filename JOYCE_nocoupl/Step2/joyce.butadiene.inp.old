@@ -1,0 +1,72 @@
+$title Butadiene - Step 2
+$equil ../G09.data/butadiene.opt+freq.fchk
+$forcefield gromacs butadiene.top
+$zero   1.d-12
+$whess 5000. 2500.0
+$depencence 1.2
+     30 =   27*1.d0   # HA-CA-CA=CB_n=2      = HA-CA-CA=CB_n=2
+     29 =   28*1.d0   # HA-CA=CB-HB_n=2      = HA-CA=CB-HB_n=2
+     36 =   28*1.d0   # HA-CA=CB-HB_n=2      = HA-CA=CB-HB_n=2
+     37 =   28*1.d0   # HA-CA=CB-HB_n=2      = HA-CA=CB-HB_n=2
+     32 =   31*1.d0   # CA-CA=CB-HB_n=2      = CA-CA=CB-HB_n=2
+     34 =   31*1.d0   # CA-CA=CB-HB_n=2      = CA-CA=CB-HB_n=2
+     35 =   31*1.d0   # CA-CA=CB-HB_n=2      = CA-CA=CB-HB_n=2
+$end
+$assign
+  1 =   3261.6463838     CA-HA                   
+  2 =   2548.5230988     CA-CA                   
+  3 =   3261.6464066     CA-HA                   
+  4 =   4867.5435341     CA=CB                   
+  5 =   3354.2216470     CB-HB                   
+  6 =   3378.4071583     CB-HB                   
+  7 =   4867.5432896     CA=CB                   
+  8 =   3354.2216668     CB-HB                   
+  9 =   3378.4071418     CB-HB                   
+ 10 =    268.0931939     HA-CA-CA                
+ 11 =    402.7755241     HA-CA=CB                
+ 12 =    268.0932529     HA-CA-CA                
+ 13 =    642.5561635     CA-CA=CB                
+ 14 =    642.5560948     CA-CA=CB                
+ 15 =    402.7754824     HA-CA=CB                
+ 16 =    352.8573629     CA=CB-HB                
+ 17 =    334.8660284     CA=CB-HB                
+ 18 =    260.8646753     HB-CB-HB                
+ 19 =    352.8574082     CA=CB-HB                
+ 20 =    334.8660103     CA=CB-HB                
+ 21 =    260.8646937     HB-CB-HB                
+ 22 =     48.6068342     CA-HA--CB--CA
+ 23 =     56.4189439     CA-CA--CB--HA
+ 24 =     28.4263501     HB--CA--HB-CB
+ 25 =     28.4267117     HB--CA--HB-CB
+$end
+
+$geom
+./../G09.data/scan_19files/butadiene_scan_0001.fchk 5.0 0.0 0.0 0.0 ; 5 3 1 8 
+./../G09.data/scan_19files/butadiene_scan_0002.fchk 5.0 0.0 0.0 0.0 -f 
+./../G09.data/scan_19files/butadiene_scan_0003.fchk 5.0 0.0 0.0 0.0 -f
+./../G09.data/scan_19files/butadiene_scan_0004.fchk 5.0 0.0 0.0 0.0 -f
+./../G09.data/scan_19files/butadiene_scan_0005.fchk 5.0 0.0 0.0 0.0 -f
+./../G09.data/scan_19files/butadiene_scan_0006.fchk 5.0 0.0 0.0 0.0 -f
+./../G09.data/scan_19files/butadiene_scan_0007.fchk 5.0 0.0 0.0 0.0 -f 
+./../G09.data/scan_19files/butadiene_scan_0008.fchk 5.0 0.0 0.0 0.0 -f
+./../G09.data/scan_19files/butadiene_scan_0009.fchk 5.0 0.0 0.0 0.0 -f
+./../G09.data/scan_19files/butadiene_scan_0010.fchk 5.0 0.0 0.0 0.0 -f
+./../G09.data/scan_19files/butadiene_scan_0011.fchk 5.0 0.0 0.0 0.0 -f
+./../G09.data/scan_19files/butadiene_scan_0012.fchk 5.0 0.0 0.0 0.0 -f
+./../G09.data/scan_19files/butadiene_scan_0013.fchk 5.0 0.0 0.0 0.0 -f
+./../G09.data/scan_19files/butadiene_scan_0014.fchk 5.0 0.0 0.0 0.0 -f
+./../G09.data/scan_19files/butadiene_scan_0015.fchk 5.0 0.0 0.0 0.0 -f
+./../G09.data/scan_19files/butadiene_scan_0016.fchk 5.0 0.0 0.0 0.0 -f
+./../G09.data/scan_19files/butadiene_scan_0017.fchk 5.0 0.0 0.0 0.0 -f
+./../G09.data/scan_19files/butadiene_scan_0018.fchk 5.0 0.0 0.0 0.0 -f
+./../G09.data/scan_19files/butadiene_scan_0019.fchk 5.0 0.0 0.0 0.0 -f
+
+$end
+#$keepff 34 - 36
+#$keepff 39 - 61 #non bonded
+
+$scan joyce.scan1.dat
+5 3 1 8 ; 0. 180. 10.
+$end
+
+end-of-file

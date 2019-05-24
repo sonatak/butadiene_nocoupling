@@ -1,0 +1,6 @@
+$title Butadiene - Step 1
+$equil ../G09.data/butadiene.opt+freq.fchk
+$forcefield gromacs butadiene.top
+$zero   1.d-12
+$whess 5000. 2500.0
+end-of-file
